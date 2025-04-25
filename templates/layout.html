@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Event By Evara{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'evara-gold': '#D4AF37',
+                        'evara-navy': '#1A365D',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="font-poppins">
+    {% include 'navbar.html' %}
+    
+    <main class="pt-20">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% block map %}
+    <!-- Map Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Find Us</h2>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe 
+                    src="{{ google_maps_url }}"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+    
+    {% include 'footer.html' %}
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

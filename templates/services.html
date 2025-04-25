@@ -1,301 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Evara Event Management</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'evara-gold': '#D4AF37',
-                        'evara-navy': '#1A365D',
-                    },
-                    fontFamily: {
-                        'playfair': ['Playfair Display', 'serif'],
-                        'poppins': ['Poppins', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-</head>
-<body class="font-poppins">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-playfair text-evara-gold">Evara</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-evara-gold">Home</a>
-                    <a href="/about.html" class="text-gray-700 hover:text-evara-gold">About</a>
-                    <a href="/services.html" class="text-gray-700 hover:text-evara-gold">Services</a>
-                    <a href="/contactus.html" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+{% extends 'layout.html' %}
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">Our Services</h1>
-            <p class="text-xl text-white">Comprehensive Event Management Solutions</p>
+{% block title %}Our Services - Evara Event Management{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">Our Services</h1>
+        <p class="text-xl text-white">Comprehensive Event Management Solutions</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <!-- Event Types Section -->
+    <section class="mb-20">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Event Types We Manage</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">💍</div>
+                <h3 class="text-xl font-semibold mb-2">Weddings & Celebrations</h3>
+                <p class="text-gray-600 mb-4">From intimate ceremonies to grand celebrations, we create magical moments that last a lifetime.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Wedding Planning</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Reception Management</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Destination Weddings</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">🏢</div>
+                <h3 class="text-xl font-semibold mb-2">Corporate Events</h3>
+                <p class="text-gray-600 mb-4">Professional event management for businesses, from conferences to product launches.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Conferences</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Product Launches</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Team Building</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">🎪</div>
+                <h3 class="text-xl font-semibold mb-2">Festivals & Concerts</h3>
+                <p class="text-gray-600 mb-4">Large-scale event management with attention to every detail.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Music Festivals</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Cultural Events</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Community Gatherings</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <!-- Event Types Section -->
-        <section class="mb-20">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Event Types We Manage</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">💍</div>
-                    <h3 class="text-xl font-semibold mb-2">Weddings & Celebrations</h3>
-                    <p class="text-gray-600 mb-4">From intimate ceremonies to grand celebrations, we create magical moments that last a lifetime.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Wedding Planning</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Reception Management</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Destination Weddings</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">🏢</div>
-                    <h3 class="text-xl font-semibold mb-2">Corporate Events</h3>
-                    <p class="text-gray-600 mb-4">Professional event management for businesses, from conferences to product launches.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Conferences</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Product Launches</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Team Building</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">🎪</div>
-                    <h3 class="text-xl font-semibold mb-2">Festivals & Concerts</h3>
-                    <p class="text-gray-600 mb-4">Large-scale event management with attention to every detail.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Music Festivals</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Cultural Events</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Community Gatherings</span>
-                        </li>
-                    </ul>
-                </div>
+    <!-- In-House Services Section -->
+    <section class="mb-20">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Our In-House Services</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">🍽️</div>
+                <h3 class="text-xl font-semibold mb-2">Catering Services</h3>
+                <p class="text-gray-600 mb-4">Customized menus and professional catering for all types of events.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Custom Menu Planning</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Professional Chefs</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Special Dietary Options</span>
+                    </li>
+                </ul>
             </div>
-        </section>
-
-        <!-- In-House Services Section -->
-        <section class="mb-20">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Our In-House Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">🍽️</div>
-                    <h3 class="text-xl font-semibold mb-2">Catering Services</h3>
-                    <p class="text-gray-600 mb-4">Customized menus and professional catering for all types of events.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Custom Menu Planning</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Professional Chefs</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Special Dietary Options</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">🎨</div>
-                    <h3 class="text-xl font-semibold mb-2">Decoration & Styling</h3>
-                    <p class="text-gray-600 mb-4">Transform any venue into a magical space with our expert decorators.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Theme Development</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Floral Arrangements</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Lighting Design</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">🎭</div>
-                    <h3 class="text-xl font-semibold mb-2">Entertainment</h3>
-                    <p class="text-gray-600 mb-4">Complete entertainment solutions to make your event memorable.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Live Performances</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>DJ Services</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Sound & Lighting</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">🎨</div>
+                <h3 class="text-xl font-semibold mb-2">Decoration & Styling</h3>
+                <p class="text-gray-600 mb-4">Transform any venue into a magical space with our expert decorators.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Theme Development</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Floral Arrangements</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Lighting Design</span>
+                    </li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Technology Solutions Section -->
-        <section class="mb-20">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Technology Solutions</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">📱</div>
-                    <h3 class="text-xl font-semibold mb-2">Event Planning Tools</h3>
-                    <p class="text-gray-600 mb-4">Digital solutions to streamline your event planning process.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Online Booking System</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Budget Management</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Guest Management</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">📊</div>
-                    <h3 class="text-xl font-semibold mb-2">Analytics & Reporting</h3>
-                    <p class="text-gray-600 mb-4">Data-driven insights to measure event success.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Performance Metrics</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>ROI Analysis</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Feedback Collection</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-evara-gold text-4xl mb-4">🎥</div>
-                    <h3 class="text-xl font-semibold mb-2">Digital Marketing</h3>
-                    <p class="text-gray-600 mb-4">Comprehensive digital marketing solutions for your events.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Social Media Management</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Email Campaigns</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Content Creation</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="bg-evara-navy text-white p-12 rounded-lg text-center">
-            <h2 class="text-3xl font-playfair mb-4">Ready to Plan Your Event?</h2>
-            <p class="text-xl mb-8">Let us help you create an unforgettable experience</p>
-            <a href="/contactus.html" class="bg-evara-gold text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Get Started</a>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-evara-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-playfair mb-4">Evara</h3>
-                    <p class="text-gray-300">Crafting unforgettable experiences since 2003.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-300 hover:text-evara-gold">Home</a></li>
-                        <li><a href="/about.html" class="text-gray-300 hover:text-evara-gold">About</a></li>
-                        <li><a href="/services.html" class="text-gray-300 hover:text-evara-gold">Services</a></li>
-                        <li><a href="/contactus.html" class="text-gray-300 hover:text-evara-gold">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>123 Event Street</li>
-                        <li>New York, NY 10001</li>
-                        <li>Phone: (555) 123-4567</li>
-                        <li>Email: info@evaraevents.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-evara-gold">
-                        <button type="submit" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Subscribe</button>
-                    </form>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Facebook</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Instagram</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2023 Evara Event Management. All rights reserved.</p>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">🎭</div>
+                <h3 class="text-xl font-semibold mb-2">Entertainment</h3>
+                <p class="text-gray-600 mb-4">Complete entertainment solutions to make your event memorable.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Live Performances</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>DJ Services</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Sound & Lighting</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+    </section>
+
+    <!-- Technology Solutions Section -->
+    <section class="mb-20">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Technology Solutions</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">📱</div>
+                <h3 class="text-xl font-semibold mb-2">Event Planning Tools</h3>
+                <p class="text-gray-600 mb-4">Digital solutions to streamline your event planning process.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Online Booking System</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Budget Management</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Guest Management</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">📊</div>
+                <h3 class="text-xl font-semibold mb-2">Analytics & Reporting</h3>
+                <p class="text-gray-600 mb-4">Data-driven insights to measure event success.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Performance Metrics</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>ROI Analysis</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Feedback Collection</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-evara-gold text-4xl mb-4">🎥</div>
+                <h3 class="text-xl font-semibold mb-2">Digital Marketing</h3>
+                <p class="text-gray-600 mb-4">Comprehensive digital marketing solutions for your events.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Social Media Management</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Email Campaigns</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Content Creation</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-evara-navy text-white p-12 rounded-lg text-center">
+        <h2 class="text-3xl font-playfair mb-4">Ready to Plan Your Event?</h2>
+        <p class="text-xl mb-8">Let us help you create an unforgettable experience</p>
+        <a href="/contactus.html" class="bg-evara-gold text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Get Started</a>
+    </section>
+</div>
+{% endblock %}
+
+{% block map %}
+<!-- Map Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Visit Our Office</h2>
+        <div class="aspect-w-16 aspect-h-9">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.7844955132505!2d80.94208367522197!3d26.84680587668641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd07c3c15643%3A0x867bb0de72c4c460!2sDigipodium%20%7C%20Final%20Year%20Project%20Training%20for%20MCA%2C%20BCA%2C%20CSE%20and%20Other*21!5e0!3m2!1sen!2sin!4v1745491338635!5m2!1sen!2sin"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

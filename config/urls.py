@@ -17,7 +17,20 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-]
+    path("", views.home, name="home"),
+    path("about/", views.about, name="about"),
+    path("services/", views.services, name="services"),
+    path("showcase/", views.showcase, name="showcase"),
+    path("testimonials/", views.testimonials, name="testimonials"),
+    path("contact/", views.contact, name="contact"),
+    path("booking/", views.booking, name="booking"),
+    path("login/", views.user_login, name="login"),
+    path("signup/", views.user_signup, name="signup"),
+    path("logout/", views.user_logout, name="logout"),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

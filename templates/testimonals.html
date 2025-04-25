@@ -1,355 +1,261 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Testimonials - Evara Event Management</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'evara-gold': '#D4AF37',
-                        'evara-navy': '#1A365D',
-                    },
-                    fontFamily: {
-                        'playfair': ['Playfair Display', 'serif'],
-                        'poppins': ['Poppins', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-</head>
-<body class="font-poppins">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Client Testimonials - Evara Event Management{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">Client Testimonials</h1>
+        <p class="text-xl text-white">Hear What Our Clients Have to Say</p>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl font-playfair text-evara-gold mb-2">500+</div>
+                <p class="text-gray-600">Events Managed</p>
+            </div>
+            <div>
+                <div class="text-4xl font-playfair text-evara-gold mb-2">98%</div>
+                <p class="text-gray-600">Client Satisfaction</p>
+            </div>
+            <div>
+                <div class="text-4xl font-playfair text-evara-gold mb-2">20+</div>
+                <p class="text-gray-600">Years Experience</p>
+            </div>
+            <div>
+                <div class="text-4xl font-playfair text-evara-gold mb-2">50+</div>
+                <p class="text-gray-600">Awards Won</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Section -->
+<section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="px-6 py-2 rounded-full bg-evara-gold text-white hover:bg-opacity-90 transition duration-300">All Reviews</button>
+            <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Weddings</button>
+            <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Corporate</button>
+            <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Festivals</button>
+            <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Birthdays</button>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Grid -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="text-evara-gold text-4xl mr-4">"</div>
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">5.0</span>
+                        </div>
+                        <h3 class="text-lg font-semibold">Luxury Wedding</h3>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">"Evara transformed our wedding into a magical experience. Their attention to detail and professionalism was outstanding. Every moment was perfect, and our guests are still talking about it!"</p>
                 <div class="flex items-center">
-                    <span class="text-2xl font-playfair text-evara-gold">Evara</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-evara-gold">Home</a>
-                    <a href="/about.html" class="text-gray-700 hover:text-evara-gold">About</a>
-                    <a href="/services.html" class="text-gray-700 hover:text-evara-gold">Services</a>
-                    <a href="/showcase.html" class="text-gray-700 hover:text-evara-gold">Showcase</a>
-                    <a href="/testimonals.html" class="text-gray-700 hover:text-evara-gold">Testimonials</a>
-                    <a href="/contactus.html" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90">Contact Us</a>
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">Sarah Johnson</h4>
+                        <p class="text-sm text-gray-500">Wedding Client</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">Client Testimonials</h1>
-            <p class="text-xl text-white">Hear What Our Clients Have to Say</p>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-4xl font-playfair text-evara-gold mb-2">500+</div>
-                    <p class="text-gray-600">Events Managed</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-playfair text-evara-gold mb-2">98%</div>
-                    <p class="text-gray-600">Client Satisfaction</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-playfair text-evara-gold mb-2">20+</div>
-                    <p class="text-gray-600">Years Experience</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-playfair text-evara-gold mb-2">50+</div>
-                    <p class="text-gray-600">Awards Won</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Filter Section -->
-    <section class="py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-center gap-4">
-                <button class="px-6 py-2 rounded-full bg-evara-gold text-white hover:bg-opacity-90 transition duration-300">All Reviews</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Weddings</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Corporate</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Festivals</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Birthdays</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Grid -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Wedding Testimonial -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-evara-gold text-4xl mr-4">"</div>
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                </div>
-                                <span class="ml-2 text-sm text-gray-500">5.0</span>
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="text-evara-gold text-4xl mr-4">"</div>
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
                             </div>
-                            <h3 class="text-lg font-semibold">Luxury Wedding</h3>
+                            <span class="ml-2 text-sm text-gray-500">5.0</span>
                         </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">"Evara transformed our wedding into a magical experience. Their attention to detail and professionalism was outstanding. Every moment was perfect, and our guests are still talking about it!"</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Sarah Johnson</h4>
-                            <p class="text-sm text-gray-500">Wedding Client</p>
-                        </div>
+                        <h3 class="text-lg font-semibold">Tech Conference</h3>
                     </div>
                 </div>
-
-                <!-- Corporate Testimonial -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-evara-gold text-4xl mr-4">"</div>
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                </div>
-                                <span class="ml-2 text-sm text-gray-500">5.0</span>
-                            </div>
-                            <h3 class="text-lg font-semibold">Tech Conference</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">"The corporate event they organized exceeded our expectations. Everything was perfectly executed, from the venue setup to the technical requirements. Our attendees were impressed!"</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Michael Chen</h4>
-                            <p class="text-sm text-gray-500">Corporate Client</p>
-                        </div>
+                <p class="text-gray-600 mb-6">"The corporate event they organized exceeded our expectations. Everything was perfectly executed, from the venue setup to the technical requirements. Our attendees were impressed!"</p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">Michael Chen</h4>
+                        <p class="text-sm text-gray-500">Corporate Client</p>
                     </div>
                 </div>
-
-                <!-- Festival Testimonial -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-evara-gold text-4xl mr-4">"</div>
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                </div>
-                                <span class="ml-2 text-sm text-gray-500">5.0</span>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="text-evara-gold text-4xl mr-4">"</div>
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
                             </div>
-                            <h3 class="text-lg font-semibold">Music Festival</h3>
+                            <span class="ml-2 text-sm text-gray-500">5.0</span>
                         </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">"Our music festival was a huge success thanks to Evara's expertise in large-scale event management. They handled everything from logistics to crowd control perfectly."</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Emily Rodriguez</h4>
-                            <p class="text-sm text-gray-500">Festival Organizer</p>
-                        </div>
+                        <h3 class="text-lg font-semibold">Music Festival</h3>
                     </div>
                 </div>
-
-                <!-- Birthday Testimonial -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-evara-gold text-4xl mr-4">"</div>
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                </div>
-                                <span class="ml-2 text-sm text-gray-500">5.0</span>
-                            </div>
-                            <h3 class="text-lg font-semibold">50th Birthday</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">"The team at Evara made my 50th birthday celebration absolutely unforgettable. They captured my vision perfectly and executed it flawlessly. Every detail was perfect!"</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Jennifer Smith</h4>
-                            <p class="text-sm text-gray-500">Birthday Client</p>
-                        </div>
+                <p class="text-gray-600 mb-6">"Our music festival was a huge success thanks to Evara's expertise in large-scale event management. They handled everything from logistics to crowd control perfectly."</p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">Emily Rodriguez</h4>
+                        <p class="text-sm text-gray-500">Festival Organizer</p>
                     </div>
                 </div>
-
-                <!-- Product Launch Testimonial -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-evara-gold text-4xl mr-4">"</div>
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                </div>
-                                <span class="ml-2 text-sm text-gray-500">5.0</span>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="text-evara-gold text-4xl mr-4">"</div>
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
                             </div>
-                            <h3 class="text-lg font-semibold">Product Launch</h3>
+                            <span class="ml-2 text-sm text-gray-500">5.0</span>
                         </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">"The product launch event was a resounding success. Evara's team created an atmosphere that perfectly matched our brand's luxury image. The media coverage was excellent!"</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">David Wilson</h4>
-                            <p class="text-sm text-gray-500">Brand Manager</p>
-                        </div>
+                        <h3 class="text-lg font-semibold">50th Birthday</h3>
                     </div>
                 </div>
-
-                <!-- Cultural Event Testimonial -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-evara-gold text-4xl mr-4">"</div>
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                </div>
-                                <span class="ml-2 text-sm text-gray-500">5.0</span>
-                            </div>
-                            <h3 class="text-lg font-semibold">Cultural Festival</h3>
-                        </div>
+                <p class="text-gray-600 mb-6">"The team at Evara made my 50th birthday celebration absolutely unforgettable. They captured my vision perfectly and executed it flawlessly. Every detail was perfect!"</p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">Jennifer Smith</h4>
+                        <p class="text-sm text-gray-500">Birthday Client</p>
                     </div>
-                    <p class="text-gray-600 mb-6">"Evara managed to blend traditional elements with modern touches perfectly. The cultural festival was a huge success, attracting record numbers of attendees."</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Priya Patel</h4>
-                            <p class="text-sm text-gray-500">Cultural Director</p>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="text-evara-gold text-4xl mr-4">"</div>
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">5.0</span>
                         </div>
+                        <h3 class="text-lg font-semibold">Product Launch</h3>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">"The product launch event was a resounding success. Evara's team created an atmosphere that perfectly matched our brand's luxury image. The media coverage was excellent!"</p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">David Wilson</h4>
+                        <p class="text-sm text-gray-500">Brand Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="text-evara-gold text-4xl mr-4">"</div>
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">5.0</span>
+                        </div>
+                        <h3 class="text-lg font-semibold">Cultural Festival</h3>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">"Evara managed to blend traditional elements with modern touches perfectly. The cultural festival was a huge success, attracting record numbers of attendees."</p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">Priya Patel</h4>
+                        <p class="text-sm text-gray-500">Cultural Director</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Video Testimonials Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-12 text-center">Video Testimonials</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="relative aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3" alt="Video Thumbnail" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <button class="w-16 h-16 rounded-full bg-evara-gold flex items-center justify-center">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </button>
-                    </div>
+<!-- Video Testimonials Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-12 text-center">Video Testimonials</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="relative aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3" alt="Video Thumbnail" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <button class="w-16 h-16 rounded-full bg-evara-gold flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
                 </div>
-                <div class="relative aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3" alt="Video Thumbnail" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <button class="w-16 h-16 rounded-full bg-evara-gold flex items-center justify-center">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </button>
-                    </div>
+            </div>
+            <div class="relative aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3" alt="Video Thumbnail" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <button class="w-16 h-16 rounded-full bg-evara-gold flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-evara-navy text-white p-12 rounded-lg text-center">
-                <h2 class="text-3xl font-playfair mb-4">Ready to Create Your Perfect Event?</h2>
-                <p class="text-xl mb-8">Let us help you make your vision a reality</p>
-                <a href="/contactus.html" class="bg-evara-gold text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Get Started</a>
-            </div>
+<!-- CTA Section -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-evara-navy text-white p-12 rounded-lg text-center">
+            <h2 class="text-3xl font-playfair mb-4">Ready to Create Your Perfect Event?</h2>
+            <p class="text-xl mb-8">Let us help you make your vision a reality</p>
+            <a href="{% url 'contact' %}" class="bg-evara-gold text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Get Started</a>
         </div>
-    </section>
+    </div>
+</section>
+{% endblock %}
 
-    <!-- Footer -->
-    <footer class="bg-evara-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-playfair mb-4">Evara</h3>
-                    <p class="text-gray-300">Crafting unforgettable experiences since 2003.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-300 hover:text-evara-gold">Home</a></li>
-                        <li><a href="/about.html" class="text-gray-300 hover:text-evara-gold">About</a></li>
-                        <li><a href="/services.html" class="text-gray-300 hover:text-evara-gold">Services</a></li>
-                        <li><a href="/showcase.html" class="text-gray-300 hover:text-evara-gold">Showcase</a></li>
-                        <li><a href="/testimonals.html" class="text-gray-300 hover:text-evara-gold">Testimonials</a></li>
-                        <li><a href="/contactus.html" class="text-gray-300 hover:text-evara-gold">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>123 Event Street</li>
-                        <li>New York, NY 10001</li>
-                        <li>Phone: (555) 123-4567</li>
-                        <li>Email: info@evaraevents.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-evara-gold">
-                        <button type="submit" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Subscribe</button>
-                    </form>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Facebook</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Instagram</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2023 Evara Event Management. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+{% block map %}
+<!-- No map on testimonials page -->
+{% endblock %}

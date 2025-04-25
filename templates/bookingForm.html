@@ -24,24 +24,7 @@
     </script>
 </head>
 <body class="font-poppins bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-playfair text-evara-gold">Evara</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-evara-gold">Home</a>
-                    <a href="/about.html" class="text-gray-700 hover:text-evara-gold">About</a>
-                    <a href="/services.html" class="text-gray-700 hover:text-evara-gold">Services</a>
-                    <a href="/showcase.html" class="text-gray-700 hover:text-evara-gold">Showcase</a>
-                    <a href="/testimonals.html" class="text-gray-700 hover:text-evara-gold">Testimonials</a>
-                    <a href="/contactus.html" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+ 
 
     <!-- Main Content -->
     <div class="pt-32 pb-20">
@@ -52,7 +35,7 @@
             </div>
 
             <!-- Progress Steps -->
-            <div class="mb-12">
+            <!-- <div class="mb-12">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center">
                         <div class="w-8 h-8 rounded-full bg-evara-gold text-white flex items-center justify-center">1</div>
@@ -69,7 +52,7 @@
                         <div class="ml-2 text-sm font-medium text-gray-600">Contact Info</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Booking Form -->
             <form class="bg-white rounded-lg shadow-lg p-8">
@@ -95,7 +78,7 @@
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2">Start Time</label>
-                            <input type="time" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-evara-gold">
+                            <input type="time" pattern="^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-evara-gold">
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2">End Time</label>
@@ -187,51 +170,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-evara-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-playfair mb-4">Evara</h3>
-                    <p class="text-gray-300">Crafting unforgettable experiences since 2003.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-300 hover:text-evara-gold">Home</a></li>
-                        <li><a href="/about.html" class="text-gray-300 hover:text-evara-gold">About</a></li>
-                        <li><a href="/services.html" class="text-gray-300 hover:text-evara-gold">Services</a></li>
-                        <li><a href="/showcase.html" class="text-gray-300 hover:text-evara-gold">Showcase</a></li>
-                        <li><a href="/testimonals.html" class="text-gray-300 hover:text-evara-gold">Testimonials</a></li>
-                        <li><a href="/contactus.html" class="text-gray-300 hover:text-evara-gold">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>123 Event Street</li>
-                        <li>New York, NY 10001</li>
-                        <li>Phone: (555) 123-4567</li>
-                        <li>Email: info@evaraevents.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-evara-gold">
-                        <button type="submit" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Subscribe</button>
-                    </form>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Facebook</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Instagram</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2023 Evara Event Management. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+ 
 </body>
 </html>

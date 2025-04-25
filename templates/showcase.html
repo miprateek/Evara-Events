@@ -1,246 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Showcase - Evara Event Management</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'evara-gold': '#D4AF37',
-                        'evara-navy': '#1A365D',
-                    },
-                    fontFamily: {
-                        'playfair': ['Playfair Display', 'serif'],
-                        'poppins': ['Poppins', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-</head>
-<body class="font-poppins">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-playfair text-evara-gold">Evara</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-evara-gold">Home</a>
-                    <a href="/about.html" class="text-gray-700 hover:text-evara-gold">About</a>
-                    <a href="/services.html" class="text-gray-700 hover:text-evara-gold">Services</a>
-                    <a href="/showcase.html" class="text-gray-700 hover:text-evara-gold">Showcase</a>
-                    <a href="/contactus.html" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90">Contact Us</a>
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Our Showcase - Evara Event Management{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">Our Showcase</h1>
+        <p class="text-xl text-white">Discover Our Most Memorable Events</p>
+    </div>
+</section>
+
+<!-- Filter Section -->
+<section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="px-6 py-2 rounded-full bg-evara-gold text-white hover:bg-opacity-90 transition duration-300">All Events</button>
+            <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Weddings</button>
+            <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Corporate</button>
+            <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Festivals</button>
+            <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Birthdays</button>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Wedding Showcase -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3" alt="Luxury Wedding" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <h3 class="text-2xl font-playfair mb-2">Luxury Wedding</h3>
+                        <p class="text-sm mb-4">A grand celebration of love with 500+ guests</p>
+                        <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">Our Showcase</h1>
-            <p class="text-xl text-white">Discover Our Most Memorable Events</p>
-        </div>
-    </section>
-
-    <!-- Filter Section -->
-    <section class="py-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-center gap-4">
-                <button class="px-6 py-2 rounded-full bg-evara-gold text-white hover:bg-opacity-90 transition duration-300">All Events</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Weddings</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Corporate</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Festivals</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 transition duration-300">Birthdays</button>
+            <!-- Corporate Event -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3" alt="Corporate Conference" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <h3 class="text-2xl font-playfair mb-2">Tech Conference</h3>
+                        <p class="text-sm mb-4">Annual tech summit with 1000+ attendees</p>
+                        <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Portfolio Grid -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Wedding Showcase -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3" alt="Luxury Wedding" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-                        <div class="absolute bottom-0 p-6 text-white">
-                            <h3 class="text-2xl font-playfair mb-2">Luxury Wedding</h3>
-                            <p class="text-sm mb-4">A grand celebration of love with 500+ guests</p>
-                            <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
-                        </div>
+            <!-- Festival -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3" alt="Music Festival" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <h3 class="text-2xl font-playfair mb-2">Summer Music Festival</h3>
+                        <p class="text-sm mb-4">3-day music festival with 20,000+ attendees</p>
+                        <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Corporate Event -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3" alt="Corporate Conference" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-                        <div class="absolute bottom-0 p-6 text-white">
-                            <h3 class="text-2xl font-playfair mb-2">Tech Conference</h3>
-                            <p class="text-sm mb-4">Annual tech summit with 1000+ attendees</p>
-                            <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
-                        </div>
+            <!-- Birthday Celebration -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3" alt="Birthday Party" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <h3 class="text-2xl font-playfair mb-2">Milestone Birthday</h3>
+                        <p class="text-sm mb-4">Elegant 50th birthday celebration</p>
+                        <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Festival -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3" alt="Music Festival" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-                        <div class="absolute bottom-0 p-6 text-white">
-                            <h3 class="text-2xl font-playfair mb-2">Summer Music Festival</h3>
-                            <p class="text-sm mb-4">3-day music festival with 20,000+ attendees</p>
-                            <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
-                        </div>
+            <!-- Product Launch -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3" alt="Product Launch" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <h3 class="text-2xl font-playfair mb-2">Product Launch</h3>
+                        <p class="text-sm mb-4">Exclusive launch event for luxury brand</p>
+                        <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Birthday Celebration -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3" alt="Birthday Party" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-                        <div class="absolute bottom-0 p-6 text-white">
-                            <h3 class="text-2xl font-playfair mb-2">Milestone Birthday</h3>
-                            <p class="text-sm mb-4">Elegant 50th birthday celebration</p>
-                            <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Launch -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3" alt="Product Launch" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-                        <div class="absolute bottom-0 p-6 text-white">
-                            <h3 class="text-2xl font-playfair mb-2">Product Launch</h3>
-                            <p class="text-sm mb-4">Exclusive launch event for luxury brand</p>
-                            <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cultural Event -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3" alt="Cultural Event" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-                        <div class="absolute bottom-0 p-6 text-white">
-                            <h3 class="text-2xl font-playfair mb-2">Cultural Festival</h3>
-                            <p class="text-sm mb-4">Traditional celebration with modern twist</p>
-                            <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
-                        </div>
+            <!-- Cultural Event -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://unsplash.com/photos/indian-family-celebrating-diwali-festival-with-fire-crackers-j-s3Xs34xRs">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <h3 class="text-2xl font-playfair mb-2">Cultural Festival</h3>
+                        <p class="text-sm mb-4">Traditional celebration with modern twist</p>
+                        <a href="#" class="text-evara-gold hover:text-white transition duration-300">View Details →</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Testimonials Section
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-12 text-center">Client Testimonials</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-evara-gold text-4xl mb-4">"</div>
-                    <p class="text-gray-600 mb-6">Evara transformed our wedding into a magical experience. Their attention to detail and professionalism was outstanding.</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Sarah Johnson</h4>
-                            <p class="text-sm text-gray-500">Wedding Client</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-evara-gold text-4xl mb-4">"</div>
-                    <p class="text-gray-600 mb-6">The corporate event they organized exceeded our expectations. Everything was perfectly executed.</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Michael Chen</h4>
-                            <p class="text-sm text-gray-500">Corporate Client</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-evara-gold text-4xl mb-4">"</div>
-                    <p class="text-gray-600 mb-6">Our music festival was a huge success thanks to Evara's expertise in large-scale event management.</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Emily Rodriguez</h4>
-                            <p class="text-sm text-gray-500">Festival Organizer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- CTA Section -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-evara-navy text-white p-12 rounded-lg text-center">
+            <h2 class="text-3xl font-playfair mb-4">Ready to Create Your Perfect Event?</h2>
+            <p class="text-xl mb-8">Let us help you make your vision a reality</p>
+            <a href="{% url 'contact' %}" class="bg-evara-gold text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Get Started</a>
         </div>
-    </section> -->
+    </div>
+</section>
+{% endblock %}
 
-    <!-- CTA Section -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-evara-navy text-white p-12 rounded-lg text-center">
-                <h2 class="text-3xl font-playfair mb-4">Ready to Create Your Perfect Event?</h2>
-                <p class="text-xl mb-8">Let us help you make your vision a reality</p>
-                <a href="/contactus.html" class="bg-evara-gold text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Get Started</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-evara-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-playfair mb-4">Evara</h3>
-                    <p class="text-gray-300">Crafting unforgettable experiences since 2003.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-300 hover:text-evara-gold">Home</a></li>
-                        <li><a href="/about.html" class="text-gray-300 hover:text-evara-gold">About</a></li>
-                        <li><a href="/services.html" class="text-gray-300 hover:text-evara-gold">Services</a></li>
-                        <li><a href="/showcase.html" class="text-gray-300 hover:text-evara-gold">Showcase</a></li>
-                        <li><a href="/contactus.html" class="text-gray-300 hover:text-evara-gold">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>123 Event Street</li>
-                        <li>New York, NY 10001</li>
-                        <li>Phone: (555) 123-4567</li>
-                        <li>Email: info@evaraevents.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-evara-gold">
-                        <button type="submit" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Subscribe</button>
-                    </form>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Facebook</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Instagram</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2023 Evara Event Management. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+{% block map %}
+<!-- No map on showcase page -->
+{% endblock %}
+- 

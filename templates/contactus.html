@@ -1,222 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Evara Event Management</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'evara-gold': '#D4AF37',
-                        'evara-navy': '#1A365D',
-                    },
-                    fontFamily: {
-                        'playfair': ['Playfair Display', 'serif'],
-                        'poppins': ['Poppins', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-</head>
-<body class="font-poppins">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-playfair text-evara-gold">Evara</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-evara-gold">Home</a>
-                    <a href="/about.html" class="text-gray-700 hover:text-evara-gold">About</a>
-                    <a href="#services" class="text-gray-700 hover:text-evara-gold">Services</a>
-                    <a href="/contactus.html" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+{% extends 'layout.html' %}
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">Contact Us</h1>
-            <p class="text-xl text-white">Let's Create Your Perfect Event Together</p>
-        </div>
-    </section>
+{% block title %}Contact Us - Evara Event Management{% endblock %}
 
-    <!-- Contact Form Section -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Contact Information -->
-                <div>
-                    <h2 class="text-3xl font-playfair text-evara-navy mb-8">Get in Touch</h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="text-evara-gold text-2xl mr-4">📍</div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Location</h3>
-                                <p class="text-gray-600">123 Event Street<br>New York, NY 10001</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-evara-gold text-2xl mr-4">📞</div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
-                                <p class="text-gray-600">(555) 123-4567</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-evara-gold text-2xl mr-4">✉️</div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Email</h3>
-                                <p class="text-gray-600">info@evaraevents.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-evara-gold text-2xl mr-4">⏰</div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Business Hours</h3>
-                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
-                            </div>
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">Contact Us</h1>
+        <p class="text-xl text-white">Let's Create Your Perfect Event Together</p>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Information -->
+            <div>
+                <h2 class="text-3xl font-playfair text-evara-navy mb-8">Get in Touch</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="text-evara-gold text-2xl mr-4">📍</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Location</h3>
+                            <p class="text-gray-600">Lower ground floor, <br> Raja ram Kumar Plaza,<br> Lucknow</p>
                         </div>
                     </div>
-                    <div class="mt-12">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Follow Us</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-gray-600 hover:text-evara-gold text-2xl">📱</a>
-                            <a href="#" class="text-gray-600 hover:text-evara-gold text-2xl">📸</a>
-                            <a href="#" class="text-gray-600 hover:text-evara-gold text-2xl">💼</a>
+                    <div class="flex items-start">
+                        <div class="text-evara-gold text-2xl mr-4">📞</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
+                            <p class="text-gray-600">(+91) 9415012347</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="text-evara-gold text-2xl mr-4">✉️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Email</h3>
+                            <p class="text-gray-600">preeti81401@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="text-evara-gold text-2xl mr-4">⏰</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Business Hours</h3>
+                            <p class="text-gray-600">Monday - Friday: 9:00 AM - 8:00 PM<br>
+                                Sunday - 12:00 PM - 8:00 PM</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h2 class="text-3xl font-playfair text-evara-navy mb-8">Send Us a Message</h2>
-                    <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                                <input type="text" id="first-name" name="first-name" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
-                            </div>
-                            <div>
-                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                                <input type="text" id="last-name" name="last-name" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
-                        </div>
-                        <div>
-                            <label for="event-type" class="block text-sm font-medium text-gray-700 mb-1">Event Type</label>
-                            <select id="event-type" name="event-type" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
-                                <option value="">Select Event Type</option>
-                                <option value="wedding">Wedding</option>
-                                <option value="corporate">Corporate Event</option>
-                                <option value="birthday">Birthday Party</option>
-                                <option value="festival">Festival</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="event-date" class="block text-sm font-medium text-gray-700 mb-1">Event Date</label>
-                            <input type="date" id="event-date" name="event-date" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
-                        </div>
-                        <div>
-                            <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Estimated Budget</label>
-                            <select id="budget" name="budget" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
-                                <option value="">Select Budget Range</option>
-                                <option value="5k-10k">$5,000 - $10,000</option>
-                                <option value="10k-25k">$10,000 - $25,000</option>
-                                <option value="25k-50k">$25,000 - $50,000</option>
-                                <option value="50k+">$50,000+</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full bg-evara-gold text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Find Us</h2>
-            <div class="aspect-w-16 aspect-h-9">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2155710122!2d-73.987844924164!3d40.748440971389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus" 
-                    class="w-full h-96 rounded-lg shadow-lg"
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-evara-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-playfair mb-4">Evara</h3>
-                    <p class="text-gray-300">Crafting unforgettable experiences since 2003.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-300 hover:text-evara-gold">Home</a></li>
-                        <li><a href="/about.html" class="text-gray-300 hover:text-evara-gold">About</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-evara-gold">Services</a></li>
-                        <li><a href="/contactus.html" class="text-gray-300 hover:text-evara-gold">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>123 Event Street</li>
-                        <li>New York, NY 10001</li>
-                        <li>Phone: (555) 123-4567</li>
-                        <li>Email: info@evaraevents.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-evara-gold">
-                        <button type="submit" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Subscribe</button>
-                    </form>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Facebook</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Instagram</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">LinkedIn</a>
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1Bchvh9vdY/?mibextid=wwXIfr" target="_blank" class="text-gray-600 hover:text-evara-gold text-2xl"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/eventsbyevara?igsh=MWFqbXVkd2syc3J6Mw==" class="text-gray-600 hover:text-evara-gold text-2xl"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-evara-gold text-2xl"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2023 Evara Event Management. All rights reserved.</p>
+
+            <!-- Contact Form -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-playfair text-evara-navy mb-8">Send Us a Message</h2>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                            <input type="text" id="first-name" name="first-name" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
+                    </div>
+                    <div>
+                        <label for="event-type" class="block text-sm font-medium text-gray-700 mb-1">Event Type</label>
+                        <select id="event-type" name="event-type" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="birthday">Birthday Party</option>
+                            <option value="festival">Festival</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="event-date" class="block text-sm font-medium text-gray-700 mb-1">Event Date</label>
+                        <input type="date" id="event-date" name="event-date" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
+                    </div>
+                    <div>
+                        <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Estimated Budget</label>
+                        <select id="budget" name="budget" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold">
+                            <option value="">Select Budget Range</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="50k+">$50,000+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-evara-gold focus:ring-evara-gold"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-evara-gold text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
+{% endblock %}
+
+{% block map %}
+<!-- Map Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Find Us</h2>
+        <div class="aspect-w-16 aspect-h-9">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.7844955132505!2d80.94208367522197!3d26.84680587668641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd07c3c15643%3A0x867bb0de72c4c460!2sDigipodium%20%7C%20Final%20Year%20Project%20Training%20for%20MCA%2C%20BCA%2C%20CSE%20and%20Other*21!5e0!3m2!1sen!2sin!4v1745491338635!5m2!1sen!2sin"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

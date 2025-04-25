@@ -1,277 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Evara Event Management</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'evara-gold': '#D4AF37',
-                        'evara-navy': '#1A365D',
-                    },
-                    fontFamily: {
-                        'playfair': ['Playfair Display', 'serif'],
-                        'poppins': ['Poppins', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-</head>
-<body class="font-poppins">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-playfair text-evara-gold">Evara</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-evara-gold">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-evara-gold">About</a>
-                    <a href="#services" class="text-gray-700 hover:text-evara-gold">Services</a>
-                    <a href="#contact" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+{% extends 'layout.html' %}
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">About Evara</h1>
-            <p class="text-xl text-white">A Part of Digipodium - Crafting Unforgettable Experiences Since 2003</p>
+{% block title %}About Us - Evara Event Management{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-432f31197ce6?ixlib=rb-4.0.3')] bg-cover bg-center"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-7xl font-playfair text-white mb-6">About Evara</h1>
+        <p class="text-xl text-white">A Part of Digipodium - Crafting Unforgettable Experiences Since 2003</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <!-- Company Overview -->
+    <section class="mb-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-playfair text-evara-navy mb-6">Our Story</h2>
+                <p class="text-gray-700 text-lg mb-6">Evara Event Management, a proud part of Digipodium, has been at the forefront of the event management industry for over 20 years. Our journey began with a simple mission: to create unforgettable experiences through meticulous planning and flawless execution.</p>
+                <p class="text-gray-700 text-lg">What started as a small event planning company has grown into a comprehensive platform offering end-to-end solutions for all types of events. Our success lies in our ability to combine traditional event management expertise with modern technological solutions.</p>
+            </div>
+            <div class="bg-gray-100 p-8 rounded-lg">
+                <h3 class="text-2xl font-playfair text-evara-navy mb-4">Key Milestones</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-evara-gold text-2xl mr-4">2003</span>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Company Founded</h4>
+                            <p class="text-gray-600">Started as a small event planning company</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-evara-gold text-2xl mr-4">2010</span>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Digital Transformation</h4>
+                            <p class="text-gray-600">Integrated technology into event management</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-evara-gold text-2xl mr-4">2015</span>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Expansion</h4>
+                            <p class="text-gray-600">Started handling national-level events</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-evara-gold text-2xl mr-4">2023</span>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">New Platform</h4>
+                            <p class="text-gray-600">Launched comprehensive event management platform</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <!-- Company Overview -->
-        <section class="mb-20">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-playfair text-evara-navy mb-6">Our Story</h2>
-                    <p class="text-gray-700 text-lg mb-6">Evara Event Management, a proud part of Digipodium, has been at the forefront of the event management industry for over 20 years. Our journey began with a simple mission: to create unforgettable experiences through meticulous planning and flawless execution.</p>
-                    <p class="text-gray-700 text-lg">What started as a small event planning company has grown into a comprehensive platform offering end-to-end solutions for all types of events. Our success lies in our ability to combine traditional event management expertise with modern technological solutions.</p>
-                </div>
-                <div class="bg-gray-100 p-8 rounded-lg">
-                    <h3 class="text-2xl font-playfair text-evara-navy mb-4">Key Milestones</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-evara-gold text-2xl mr-4">2003</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Company Founded</h4>
-                                <p class="text-gray-600">Started as a small event planning company</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-evara-gold text-2xl mr-4">2010</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Digital Transformation</h4>
-                                <p class="text-gray-600">Integrated technology into event management</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-evara-gold text-2xl mr-4">2015</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Expansion</h4>
-                                <p class="text-gray-600">Started handling national-level events</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-evara-gold text-2xl mr-4">2023</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">New Platform</h4>
-                                <p class="text-gray-600">Launched comprehensive event management platform</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Mission and Vision -->
+    <section class="mb-20">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-evara-navy text-white p-8 rounded-lg">
+                <h3 class="text-2xl font-playfair mb-4">Our Mission</h3>
+                <p class="text-gray-300 mb-6">To provide a one-stop solution for planning and executing all types of events, offering exclusive ideas and customizable packages based on client preferences and budget.</p>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>End-to-end event solutions</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Customizable event packages</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-gold mr-2">✓</span>
+                        <span>Budget-friendly options</span>
+                    </li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Mission and Vision -->
-        <section class="mb-20">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-evara-navy text-white p-8 rounded-lg">
-                    <h3 class="text-2xl font-playfair mb-4">Our Mission</h3>
-                    <p class="text-gray-300 mb-6">To provide a one-stop solution for planning and executing all types of events, offering exclusive ideas and customizable packages based on client preferences and budget.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>End-to-end event solutions</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Customizable event packages</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-gold mr-2">✓</span>
-                            <span>Budget-friendly options</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-evara-gold text-white p-8 rounded-lg">
-                    <h3 class="text-2xl font-playfair mb-4">Our Vision</h3>
-                    <p class="text-gray-100 mb-6">To revolutionize the event management industry by combining traditional expertise with cutting-edge technology, creating seamless and memorable experiences for our clients.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="text-evara-navy mr-2">✓</span>
-                            <span>Innovative event solutions</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-navy mr-2">✓</span>
-                            <span>Technological integration</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-evara-navy mr-2">✓</span>
-                            <span>Industry leadership</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Overview -->
-        <section class="mb-20">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Our Comprehensive Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-evara-gold text-4xl mb-4">🎉</div>
-                    <h3 class="text-xl font-semibold mb-2">Event Types</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• Weddings & Celebrations</li>
-                        <li>• Corporate Events</li>
-                        <li>• National Events</li>
-                        <li>• Festivals & Concerts</li>
-                        <li>• Private Parties</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-evara-gold text-4xl mb-4">🎨</div>
-                    <h3 class="text-xl font-semibold mb-2">In-House Services</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• Catering</li>
-                        <li>• Fireworks</li>
-                        <li>• DJ & Sound</li>
-                        <li>• Flower Decoration</li>
-                        <li>• Photography</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-evara-gold text-4xl mb-4">💻</div>
-                    <h3 class="text-xl font-semibold mb-2">Technology Solutions</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• Custom Event Planning</li>
-                        <li>• Real-time Budgeting</li>
-                        <li>• Vendor Management</li>
-                        <li>• Digital Marketing</li>
-                        <li>• Analytics & Reporting</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section class="mb-20">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Our Team</h2>
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                    <h3 class="text-xl font-semibold mb-2">John Doe</h3>
-                    <p class="text-gray-600">CEO & Founder</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                    <h3 class="text-xl font-semibold mb-2">Jane Smith</h3>
-                    <p class="text-gray-600">Event Director</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                    <h3 class="text-xl font-semibold mb-2">Mike Johnson</h3>
-                    <p class="text-gray-600">Technical Lead</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                    <h3 class="text-xl font-semibold mb-2">Sarah Williams</h3>
-                    <p class="text-gray-600">Creative Director</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Awards & Recognition -->
-        <section class="mb-20">
-            <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Awards & Recognition</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <div class="text-evara-gold text-4xl mb-4">🏆</div>
-                    <h3 class="text-xl font-semibold mb-2">Best Event Management Company 2022</h3>
-                    <p class="text-gray-600">National Event Management Awards</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <div class="text-evara-gold text-4xl mb-4">🌟</div>
-                    <h3 class="text-xl font-semibold mb-2">Innovation in Event Technology</h3>
-                    <p class="text-gray-600">Tech Excellence Awards 2021</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <div class="text-evara-gold text-4xl mb-4">🎯</div>
-                    <h3 class="text-xl font-semibold mb-2">Customer Satisfaction Award</h3>
-                    <p class="text-gray-600">Service Excellence Awards 2023</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-evara-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-playfair mb-4">Evara</h3>
-                    <p class="text-gray-300">Crafting unforgettable experiences since 2003.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-300 hover:text-evara-gold">Home</a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-evara-gold">About</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-evara-gold">Services</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-evara-gold">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>123 Event Street</li>
-                        <li>New York, NY 10001</li>
-                        <li>Phone: (555) 123-4567</li>
-                        <li>Email: info@evaraevents.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-evara-gold">
-                        <button type="submit" class="bg-evara-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Subscribe</button>
-                    </form>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Facebook</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">Instagram</a>
-                        <a href="#" class="text-gray-300 hover:text-evara-gold">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2023 Evara Event Management. All rights reserved.</p>
+            <div class="bg-evara-gold text-white p-8 rounded-lg"></div>
+                <h3 class="text-2xl font-playfair mb-4">Our Vision</h3>
+                <p class="text-gray-100 mb-6">To revolutionize the event management industry by combining traditional expertise with cutting-edge technology, creating seamless and memorable experiences for our clients.</p>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <span class="text-evara-navy mr-2">✓</span>
+                        <span>Innovative event solutions</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-navy mr-2">✓</span>
+                        <span>Technological integration</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-evara-navy mr-2">✓</span>
+                        <span>Industry leadership</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="mb-20">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Our Comprehensive Services</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-evara-gold text-4xl mb-4">🎉</div>
+                <h3 class="text-xl font-semibold mb-2">Event Types</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Weddings & Celebrations</li>
+                    <li>• Corporate Events</li>
+                    <li>• National Events</li>
+                    <li>• Festivals & Concerts</li>
+                    <li>• Private Parties</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-evara-gold text-4xl mb-4">🎨</div>
+                <h3 class="text-xl font-semibold mb-2">In-House Services</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Catering</li>
+                    <li>• Fireworks</li>
+                    <li>• DJ & Sound</li>
+                    <li>• Flower Decoration</li>
+                    <li>• Photography</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-evara-gold text-4xl mb-4">💻</div>
+                <h3 class="text-xl font-semibold mb-2">Technology Solutions</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Custom Event Planning</li>
+                    <li>• Real-time Budgeting</li>
+                    <li>• Vendor Management</li>
+                    <li>• Digital Marketing</li>
+                    <li>• Analytics & Reporting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="mb-20">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Our Team</h2>
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                <h3 class="text-xl font-semibold mb-2">John Doe</h3>
+                <p class="text-gray-600">CEO & Founder</p>
+            </div>
+            <div class="text-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                <h3 class="text-xl font-semibold mb-2">Jane Smith</h3>
+                <p class="text-gray-600">Event Director</p>
+            </div>
+            <div class="text-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                <h3 class="text-xl font-semibold mb-2">Mike Johnson</h3>
+                <p class="text-gray-600">Technical Lead</p>
+            </div>
+            <div class="text-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                <h3 class="text-xl font-semibold mb-2">Sarah Williams</h3>
+                <p class="text-gray-600">Creative Director</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="mb-20">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Awards & Recognition</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="text-evara-gold text-4xl mb-4">🏆</div>
+                <h3 class="text-xl font-semibold mb-2">Best Event Management Company 2022</h3>
+                <p class="text-gray-600">National Event Management Awards</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="text-evara-gold text-4xl mb-4">🌟</div>
+                <h3 class="text-xl font-semibold mb-2">Innovation in Event Technology</h3>
+                <p class="text-gray-600">Tech Excellence Awards 2021</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="text-evara-gold text-4xl mb-4">🎯</div>
+                <h3 class="text-xl font-semibold mb-2">Customer Satisfaction Award</h3>
+                <p class="text-gray-600">Service Excellence Awards 2023</p>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block map %}
+<!-- Map Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Our Location</h2>
+        <div class="aspect-w-16 aspect-h-9">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.7844955132505!2d80.94208367522197!3d26.84680587668641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd07c3c15643%3A0x867bb0de72c4c460!2sDigipodium%20%7C%20Final%20Year%20Project%20Training%20for%20MCA%2C%20BCA%2C%20CSE%20and%20Other*21!5e0!3m2!1sen!2sin!4v1745491338635!5m2!1sen!2sin"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}
