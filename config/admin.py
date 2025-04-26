@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import MapSettings, BookingForm, ContactUs
+from .models import MapSettings, ContactUs
 
 @admin.register(MapSettings)
 class MapSettingsAdmin(admin.ModelAdmin):
@@ -8,12 +8,7 @@ class MapSettingsAdmin(admin.ModelAdmin):
     search_fields = ('location_name',)
     ordering = ('-is_default', 'location_name')
 
-@admin.register(BookingForm)
-class BookingFormAdmin(admin.ModelAdmin):
-    list_display = ('booking_reference', 'event_type', 'full_name', 'event_date', 'status')
-    list_filter = ('event_type', 'status', 'event_date')
-    search_fields = ('first_name', 'last_name', 'email', 'booking_reference')
-    ordering = ('-created_at',)
+
 
 @admin.register(ContactUs)
 class ContactUsAdmin(admin.ModelAdmin):

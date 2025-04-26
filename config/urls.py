@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
@@ -29,7 +29,7 @@ urlpatterns = [
     path("showcase/", views.showcase, name="showcase"),
     path("testimonials/", views.testimonials, name="testimonials"),
     path("contact/", views.contact, name="contact"),
-    path("booking/", views.booking, name="booking"),
+    path("booking/", include("booking.urls")),
     path("login/", views.user_login, name="login"),
     path("signup/", views.user_signup, name="signup"),
     path("logout/", views.user_logout, name="logout"),
