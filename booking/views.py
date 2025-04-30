@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import EventBookingForm
+from .models import BookingForm
 
 @login_required
 def booking_view(request):
@@ -16,3 +17,10 @@ def booking_view(request):
         form = EventBookingForm()
     
     return render(request, 'bookingForm.html', {'form': form})
+
+@login_required
+def booking_list_view(request):
+    bookings = BookingForm.objects.all().order_by('-created_at')
+    return render(request, 'booking/booking_list.html', {
+        'bookings': bookings
+    })
