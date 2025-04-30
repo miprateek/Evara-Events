@@ -30,7 +30,5 @@ urlpatterns = [
     path("testimonials/", views.testimonials, name="testimonials"),
     path("contact/", views.contact, name="contact"),
     path("booking/", include("booking.urls")),
-    path("login/", views.user_login, name="login"),
-    path("signup/", views.user_signup, name="signup"),
-    path("logout/", views.user_logout, name="logout"),
+    path("", include("authentication.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

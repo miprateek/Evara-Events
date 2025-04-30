@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "config",
     "booking",
     "widget_tweaks",
+    "authentication",
 ]
 
 MIDDLEWARE = [

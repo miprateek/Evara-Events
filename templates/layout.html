@@ -7,6 +7,12 @@
     <title>{% block title %}Event By Evara{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -34,7 +40,7 @@
 
     {% block map %}
     <!-- Map Section -->
-    <section class="py-20 bg-gray-50">
+    {% comment %} <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-playfair text-evara-navy mb-8 text-center">Find Us</h2>
             <div class="aspect-w-16 aspect-h-9">
@@ -49,7 +55,7 @@
                 </iframe>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
     {% endblock %}
     
     {% include 'footer.html' %}
