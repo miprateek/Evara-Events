@@ -24,3 +24,14 @@ def booking_list_view(request):
     return render(request, 'booking/booking_list.html', {
         'bookings': bookings
     })
+
+@login_required
+def display_bookings(request):
+    if request.user.is_authenticated:
+        # Get all bookings for the logged-in user
+        user_bookings = BookingForm.objects.filter(user=request.user).order_by('-created_at')
+        context = {
+            'bookings': user_bookings
+        }
+        return render(request, 'bookings.html', context)
+    return redirect('login')
