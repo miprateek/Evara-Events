@@ -3,6 +3,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils import timezone
 
 
+
 class ContactUs(models.Model):
     # Contact Information
     first_name = models.CharField(max_length=100)
