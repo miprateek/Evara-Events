@@ -82,6 +82,13 @@ class BookingForm(models.Model):
         blank=True,
         related_name='managed_bookings'
     )
+    user = models.ForeignKey(
+        'auth.User',  # Django's built-in User model
+        on_delete=models.CASCADE,
+        related_name='bookings',
+        null=True,  # Add this line
+        blank=True  # Add this line
+    )
 
     class Meta:
         ordering = ['-created_at']
@@ -92,12 +99,19 @@ class BookingForm(models.Model):
         return f"{self.get_event_type_display()} - {self.first_name} {self.last_name} - {self.event_date}"
 
     def save(self, *args, **kwargs):
+        # First save the instance to generate an ID if it doesn't exist
+        if not self.pk:  # if object is being created, not updated
+            super().save(*args, **kwargs)
+            
         if not self.booking_reference:
             # Generate a unique booking reference
             prefix = self.event_type[:3].upper()
             timestamp = timezone.now().strftime('%y%m%d')
-            random_digits = str(self.id)[-4:].zfill(4) if self.id else '0000'
+            # Safely convert self.id to string and get last 4 digits
+            random_digits = str(self.pk).zfill(4)[-4:]
             self.booking_reference = f"{prefix}-{timestamp}-{random_digits}"
+            
+        # Save again with the reference
         super().save(*args, **kwargs)
 
     @property
