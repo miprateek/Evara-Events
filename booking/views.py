@@ -22,7 +22,7 @@ def booking_view(request):
 @login_required
 def booking_list_view(request):
     bookings = BookingForm.objects.all().order_by('-created_at')
-    return render(request, 'booking/booking_list.html', {
+    return render(request, 'booking_list.html', {
         'bookings': bookings
     })
 
