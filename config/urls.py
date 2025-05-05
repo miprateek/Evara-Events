@@ -31,4 +31,5 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("booking/", include("booking.urls")),
     path("", include("authentication.urls")),
+    path("feedback/", views.give_feedback, name="give_feedback"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
