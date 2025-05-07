@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # from .models import Booking
+from .forms import FeedbackForm
+from .models import Feedback
 
 def home(request):
     return render(request, 'index.html')
@@ -72,4 +74,18 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('home')
+
+@login_required
+def give_feedback(request):
+    if request.method == 'POST':
+        form = FeedbackForm(request.POST)
+        if form.is_valid():
+            feedback = form.save(commit=False)
+            feedback.user = request.user
+            feedback.save()
+            messages.success(request, 'Thank you for your feedback!')
+            return redirect('home')
+    else:
+        form = FeedbackForm()
+    return render(request, 'feedback.html', {'form': form})
 

@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils import timezone
-
+from django.contrib.auth.models import User
 
 
 class ContactUs(models.Model):
@@ -89,4 +89,13 @@ class MapSettings(models.Model):
             # Set all other locations as non-default
             MapSettings.objects.filter(is_default=True).update(is_default=False)
         super().save(*args, **kwargs)
+
+class Feedback(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment = models.TextField()
+    rating = models.PositiveSmallIntegerField()  # e.g., 1-5
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.rating}"
 
